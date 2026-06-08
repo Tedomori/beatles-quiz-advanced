@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ビートルズ クイズ 上級編</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- スタート画面 -->
+    <div id="start-screen" class="screen active">
+      <div class="hero-icon">🏆</div>
+      <span class="badge">上級編 ／ ADVANCED</span>
+      <h1>ビートルズ<br>クイズ</h1>
+      <p class="subtitle">
+        200問からランダムに5問を出題する上級編。<br>
+        レコーディングの裏話・楽曲の細部・<br>
+        マニアックな歴史まで、本物の知識が試されます。
+      </p>
+      <div class="info-box">
+        <div class="info-row"><span class="info-icon">❓</span><span>1回につき <strong>5問</strong>（毎回違う問題）</span></div>
+        <div class="info-row"><span class="info-icon">🔢</span><span>全 <strong>200問</strong> のプールからランダム選択</span></div>
+        <div class="info-row"><span class="info-icon">📝</span><span>4択形式　解答後に詳しい解説を表示</span></div>
+        <div class="info-row"><span class="info-icon">💀</span><span>難易度：<strong>上級</strong>　かなり手強いです！</span></div>
+      </div>
+      <button id="start-btn" class="btn btn-primary">挑戦する！</button>
+    </div>
+
+    <!-- クイズ画面 -->
+    <div id="quiz-screen" class="screen">
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="question-counter">
+        問題 <span id="q-current" class="q-num">1</span>
+        <span class="q-sep"> / </span><span id="q-total">5</span>
+      </div>
+      <p id="question-text" class="question-text"></p>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="next-btn" class="btn btn-primary hidden">次の問題へ →</button>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="result-screen" class="screen">
+      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+      <div id="result-icon" class="result-icon">🏆</div>
+      <p id="result-title" class="result-title"></p>
+      <div class="score-box">
+        <div id="result-score" class="result-score"></div>
+        <div class="result-label">正解数</div>
+      </div>
+      <p id="result-comment" class="result-comment"></p>
+      <button id="retry-btn" class="btn btn-primary">もう一度挑戦！</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
